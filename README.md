@@ -203,25 +203,6 @@ Includes:
 
 ---
 
-# 🔍 Citations
-
-```
-@article{lillicrap2015continuous,
-  title={Continuous control with deep reinforcement learning},
-  author={Lillicrap, Timothy and others},
-  journal={arXiv},
-  year={2015}
-}
-
-@article{hull2018finbert,
-  title={FinBERT: A Pretrained Language Model for Financial Sentiment Analysis},
-  author={Araci, Dogu},
-  year={2019}
-}
-```
-
----
-
 # 🏁 Final Notes
 This project demonstrates:
 

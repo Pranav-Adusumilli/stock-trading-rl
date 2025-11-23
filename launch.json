@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Train DQN",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/train_dqn.py",
+      "console": "integratedTerminal",
+      "args": ["--config", "${workspaceFolder}/config.yaml"]
+    }
+  ]
+}

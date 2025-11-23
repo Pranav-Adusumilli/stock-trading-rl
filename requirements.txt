@@ -1,0 +1,13 @@
+numpy
+pandas
+yfinance
+matplotlib
+torch>=1.13
+gym
+tqdm
+pyyaml
+tensorboard
+ta  
+scikit-learn
+seaborn
+stable-baselines3[extra]

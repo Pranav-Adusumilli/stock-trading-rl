@@ -1,0 +1,9 @@
+data/
+logs/
+logs_td3/
+models/
+models_td3/
+__pycache__/
+*.pth
+*.pt
+*.png

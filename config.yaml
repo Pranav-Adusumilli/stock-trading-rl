@@ -1,0 +1,41 @@
+data:
+  tickers: ["AAPL"]
+  ticker: "AAPL"
+  start_date: "2018-01-01"
+  end_date: "2023-12-31"
+  cache_csv: "data/{ticker}.csv"
+
+env:
+  window_size: 40
+  initial_balance: 100000
+  transaction_cost: 0.001
+  reward_type: "net_worth"
+  reward_risk_lambda: 0.001
+
+model:
+  hidden_sizes: [256, 256]
+  dueling: true
+
+training:
+  episodes: 800
+  max_steps: 750
+  batch_size: 128
+  gamma: 0.995
+  lr: 0.00025
+  buffer_size: 300000
+  target_update: 2000
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay: 0.997
+  save_dir: "models/"
+  log_dir: "logs/tensorboard/"
+
+  # NEW FEATURES:
+  save_full_model: true        # also save full torch model
+  checkpoint_interval: 50      # save every 50 episodes
+
+  resume: false                # resume training?
+  resume_path: "models/policy_latest.pth"
+
+  eval_interval: 0             # 0 = no auto eval
+  eval_ticker: "AAPL"

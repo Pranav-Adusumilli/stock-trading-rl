@@ -1,0 +1,36 @@
+# config_multi_td3.yaml
+data:
+  tickers: ["AAPL", "MSFT", "GOOG", "NVDA"]
+  ticker: "AAPL"
+  start_date: "2018-01-01"
+  end_date: "2023-12-31"
+  cache_dir: "data/"
+
+env:
+  window_size: 40
+  initial_balance: 100000
+  transaction_cost: 0.001
+  reward_type: "net_worth"
+  reward_risk_lambda: 0.001
+  include_sentiment: true
+  sentiment_reward_lambda: 0.01   # <--- NEW: scale for sentiment-shaped reward
+
+model:
+  hidden_sizes: [256, 256]
+  dueling: true
+
+training:
+  episodes: 800
+  max_steps: 750
+  batch_size: 128
+  gamma: 0.995
+  lr: 0.00025
+  buffer_size: 300000
+  target_update: 2000
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay: 0.997
+  save_dir: "models_td3/"
+  log_dir: "logs/tensorboard/"
+  save_full_model: false
+  checkpoint_interval: 5000
